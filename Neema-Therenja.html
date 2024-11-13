@@ -4,7 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+    <title>REGISTRATION FORM</title>
+         <style>
+        body {
+            background-image: url('Pasted image.png');
+            background-size: cover; /* To make the image cover the whole page */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent image from repeating */
+        } 
+</style>
     <!-- External Stylesheet Link -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -12,14 +20,15 @@
 <body>
     <header>
         <h1>Registration Form</h1>
-        <p>Please fill in the required fields.</p>
+        <h2><p>Please fill in the required fields.</p></h2>
+        
     </header>
 
     <!-- Form -->
     <form id="registrationForm" action="/submit" method="post">
         <!-- Personal Information Fieldset -->
         <fieldset>
-            <legend>Personal Information</legend>
+            <legend><b>Personal Information</b></legend>
 
             <!-- First Name -->
             <label for="firstName">First Name:</label>
@@ -76,11 +85,11 @@
             <legend>Referrer and Bio</legend>
 
             <!-- Referrer Dropdown -->
-            <label for="referrer">How did you find us?</label>
+            <label for="referrer">How did you know about us?</label>
             <select id="referrer" name="referrer">
                 <option value="friend">Friend</option>
                 <option value="search">Online Search</option>
-                <option value="socialMedia">Social Media</option>
+                <option value="Paper work">Fliers</option>
             </select>
             <br><br>
 
@@ -120,6 +129,10 @@
                     <option value="India">India</option>
                     <option value="China">China</option>
                 </optgroup>
+                <optgroup label="Europe">
+                    <option value="Belgium">Belgium</option>
+                    <option value="Austria">Austria</option>
+                </optgroup>
             </select>
             <br><br>
         </fieldset>
@@ -129,12 +142,12 @@
             <legend>Terms and Conditions</legend>
 
             <!-- Checkbox for Terms -->
-            <label for="terms">Accept Terms and Conditions:</label>
-            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">Accept Terms and Conditions:</label><br>
+                 <input type="checkbox" id="terms" name="terms" required>
             <label for="terms">I agree to the <a href="/terms" target="_blank">Terms and Conditions</a></label>
             <br><br>
         </fieldset>
-
+        
         <!-- Submit Button -->
         <button type="submit">Submit</button>
     </form>
